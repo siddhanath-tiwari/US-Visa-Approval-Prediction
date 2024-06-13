@@ -23,7 +23,7 @@ class DataIngestionConfig:
     train_test_split_ratio: float = DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO
     collection_name:str = DATA_INGESTION_COLLECTION_NAME
 
-'''
+
 
 
 @dataclass
