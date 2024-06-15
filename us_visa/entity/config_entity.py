@@ -31,9 +31,9 @@ class DataValidationConfig:
     drift_report_file_path: str = os.path.join(data_validation_dir, DATA_VALIDATION_DRIFT_REPORT_DIR,
                                                DATA_VALIDATION_DRIFT_REPORT_FILE_NAME)
     
-    
-    
-    
+
+
+
 @dataclass
 class DataTransformationConfig:
     data_transformation_dir: str = os.path.join(training_pipeline_config.artifact_dir, DATA_TRANSFORMATION_DIR_NAME)
@@ -44,9 +44,7 @@ class DataTransformationConfig:
     transformed_object_file_path: str = os.path.join(data_transformation_dir,
                                                      DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
                                                      PREPROCSSING_OBJECT_FILE_NAME)
-
-
-
+    
 
 
 
@@ -59,14 +57,13 @@ class ModelTrainerConfig:
 
 
 
-
 @dataclass
 class ModelEvaluationConfig:
     changed_threshold_score: float = MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
     bucket_name: str = MODEL_BUCKET_NAME
     s3_model_key_path: str = MODEL_FILE_NAME
-    
-    
+
+
 
 @dataclass
 class ModelPusherConfig:
@@ -74,3 +71,8 @@ class ModelPusherConfig:
     s3_model_key_path: str = MODEL_FILE_NAME
 
 
+
+@dataclass
+class USvisaPredictorConfig:
+    model_file_path: str = MODEL_FILE_NAME
+    model_bucket_name: str = MODEL_BUCKET_NAME
